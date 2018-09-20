@@ -1,0 +1,6 @@
+#CentOS 7.5
+
+
+yum group install "Development Tools" "Compatibility Libraries" -y
+systemctl mask firewalld;systemctl stop firewalld;yum -y install iptables-services;systemctl enable iptables;systemctl start iptables
+iptables --list;iptables --flush;iptables --delete-chain;service iptables save
